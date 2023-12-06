@@ -7,18 +7,18 @@ services:
       args:
         UPSTREAM_VERSION: v2.54.0
     ports:
-      - "31305:31305/tcp"
-      - "31305:31305/udp"
-      - "43084:43084/tcp"
-      - "43084:43084/udp"
-      - "5015:5015/udp"
-      - "5016:5016/tcp"
+      - "35416:35416/tcp"
+      - "35416:35416/udp"
+      - "47282:47282/tcp"
+      - "47282:47282/udp"
+      - "9113:9113/udp"
+      - "9115:9115/tcp"
     volumes:
-      - "data:/home/erigon-gnosis/.local/share"
+      - "data:/home/sepolia-erigon/.local/share"
     environment:
-      P2P_PORT: 31305
-      CAPLIN_P2P_PORT: 5015
-      CAPLIN_P2P_TCP_PORT: 5016
+      P2P_PORT: 35416
+      CAPLIN_P2P_PORT: 9113
+      CAPLIN_P2P_TCP_PORT: 9115
       EXTRA_OPTS: "--http.api=eth,erigon,web3,net,debug,trace"
     restart: unless-stopped
     ulimits:

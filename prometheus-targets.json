@@ -1,12 +1,12 @@
 [
     {
         "labels": {
-            "package": "erigon-gnosis.dnp.dappnode.eth",
-            "service": "erigon",
+            "package": "sepolia-erigon.dnp.dappnode.eth",
+            "service": "sepolia-erigon",
             "__metrics_path__": "/debug/metrics/prometheus"
         },
         "targets": [
-            "erigon.erigon-gnosis.dappnode:6060"
+            "sepolia-erigon.sepolia-erigon.dappnode:6060"
         ]
     }
 ]
