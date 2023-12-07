@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dappnode/DAppNodePackage-Gnosis-Chain-Erigon.git"
+    "url": "git+https://github.com/dappnode/DAppNodePackage-Sepolia-Erigon.git"
   },
   "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-Gnosis-Chain-Erigon/issues"
+    "url": "https://github.com/dappnode/DAppNodePackage-Sepolia-Erigon/issues"
   },
   "exposable": [
     {
