@@ -29,4 +29,5 @@ exec erigon --datadir=${DATADIR} \
     --torrent.port=47282 \
     --torrent.upload.rate=16mb \
     --torrent.download.rate=32mb \
+    --db.size.limit=8TB \
     ${EXTRA_OPTS}
