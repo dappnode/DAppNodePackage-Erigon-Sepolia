@@ -1,20 +1,20 @@
 version: "3.5"
 services:
   sepolia-erigon:
-    image: "sepolia-erigon.sepolia-erigon.dnp.dappnode.eth:0.1.0"
+    image: sepolia-erigon.sepolia-erigon.dnp.dappnode.eth:0.1.0
     build:
       context: .
       args:
-        UPSTREAM_VERSION: v2.58.1
+        UPSTREAM_VERSION: v2.60.1
     ports:
-      - "35416:35416/tcp"
-      - "35416:35416/udp"
-      - "47282:47282/tcp"
-      - "47282:47282/udp"
-      - "9113:9113/udp"
-      - "9115:9115/tcp"
+      - 35416:35416/tcp
+      - 35416:35416/udp
+      - 47282:47282/tcp
+      - 47282:47282/udp
+      - 9113:9113/udp
+      - 9115:9115/tcp
     volumes:
-      - "data:/home/sepolia-erigon/.local/share"
+      - data:/home/sepolia-erigon/.local/share
     environment:
       P2P_PORT: 35416
       CAPLIN_P2P_PORT: 9113
