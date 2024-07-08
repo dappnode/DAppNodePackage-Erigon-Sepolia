@@ -2,7 +2,7 @@
   "name": "sepolia-erigon.dnp.dappnode.eth",
   "version": "0.1.0",
   "shortDescription": "Modular Ethereum client on the efficiency frontier, written in Go, for the Sepolia Testnet",
-  "description": "Erigon is a next generation Ethereum client that introduces several new concepts:\n\n* A modular client design, enabling parallelized development of the client\n\n* New (`flat`) model of storing Ethereum state, allowing a lower disk footprint\n\n* Preprocessing of data outside of the storage engine, making database write operations faster by a magnitude\n\n* Staged synchronization technique, allowing very fast synchronization",
+  "description": "Sepolia Erigon is a next generation Ethereum client that introduces several new concepts:\n\n* A modular client design, enabling parallelized development of the client\n\n* New (`flat`) model of storing Ethereum state, allowing a lower disk footprint\n\n* Preprocessing of data outside of the storage engine, making database write operations faster by a magnitude\n\n* Staged synchronization technique, allowing very fast synchronization",
   "upstreamVersion": "v2.60.3",
   "upstreamRepo": "ledgerwatch/erigon",
   "upstreamArg": "UPSTREAM_VERSION",
@@ -12,13 +12,13 @@
   "architectures": ["linux/amd64"],
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
+    "Voss <voss@visnovalabs.io> (https://github.com/alexpeterson91)",
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
-    "Pablo Mendez <mendez4a@gmail.com> (https://github.com/pablomendezroyo)",
-    "Voss <voss@visnovalabs.io> (https://github.com/alexpeterson91)"
+    "Pablo Mendez <mendez4a@gmail.com> (https://github.com/pablomendezroyo)"
   ],
   "links": {
     "api": "http://sepolia-erigon.dappnode:8545",
-    "apiEngine": "http://sepolia-erigon.dappnode:8551",
+    "Beacon-API": "http://sepolia-erigon.dappnode:3500",
     "homepage": "https://github.com/ledgerwatch/erigon"
   },
   "mainService": "sepolia-erigon",
@@ -35,10 +35,16 @@
   },
   "exposable": [
     {
-      "name": "Sepolia Erigon JSON RPC",
-      "description": "JSON RPC endpoint for Sepolia Erigon (HTTPS & WSS)",
+      "name": "Sepolia Erigon Execution API JSON RPC",
+      "description": "Execution API RPC Endpoints for Sepolia Erigon (HTTPS & WSS)",
       "serviceName": "sepolia-erigon",
       "port": 8545
+    },
+    {
+      "name": "Sepolia Erigon Beacon API JSON RPC",
+      "description": "Beacon API JSON API Endpoints for Sepolia Erigon (HTTPS & WSS)",
+      "serviceName": "sepolia-erigon",
+      "port": 3500
     }
   ]
 }

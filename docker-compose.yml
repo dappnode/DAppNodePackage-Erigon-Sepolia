@@ -6,7 +6,14 @@ services:
       context: .
       args:
         UPSTREAM_VERSION: v2.60.3
+        UPSTREAM_VERSION: v2.60.3
     ports:
+      - 35416:35416/tcp
+      - 35416:35416/udp
+      - 47282:47282/tcp
+      - 47282:47282/udp
+      - 9113:9113/udp
+      - 9115:9115/tcp
       - 35416:35416/tcp
       - 35416:35416/udp
       - 47282:47282/tcp
@@ -15,11 +22,15 @@ services:
       - 9115:9115/tcp
     volumes:
       - data:/home/sepolia-erigon/.local/share
+      - data:/home/sepolia-erigon/.local/share
     environment:
       P2P_PORT: 35416
       CAPLIN_P2P_PORT: 9113
       CAPLIN_P2P_TCP_PORT: 9115
-      EXTRA_OPTS: "--http.api=eth,erigon,web3,net,debug,trace"
+      CAPLIN_BACKFILLING: "false"
+      CAPLIN_ARCHIVE: "false"
+      CAPLIN_BEACON_API: "beacon,config,debug,builder,validator,events,node,rewards,lighthouse"
+      EXTRA_OPTS: "--http.api=eth,erigon,web3,net,debug,txpool"
     restart: unless-stopped
     ulimits:
       nofile:
