@@ -4,7 +4,7 @@
 DATADIR="/home/sepolia-erigon/.local/share"
 
 ##########
-# Erigon #
+# Sepolia Erigon With Embedded Beacon Client Caplin #
 ##########
 
 exec erigon --datadir=${DATADIR} \
@@ -19,6 +19,11 @@ exec erigon --datadir=${DATADIR} \
     --lightclient.discovery.addr=0.0.0.0 \
     --lightclient.discovery.port=${CAPLIN_P2P_PORT} \
     --lightclient.discovery.tcpport=${CAPLIN_P2P_TCP_PORT} \
+    --caplin.backfilling="${CAPLIN_BACKFILLING}" \
+    --caplin.archive="${CAPLIN_ARCHIVE}" \
+    --beacon.api="${CAPLIN_BEACON_API}" \
+    --beacon.api.addr=0.0.0.0 \
+    --beacon.api.port=3500 \
     --metrics \
     --metrics.addr=0.0.0.0 \
     --metrics.port=6060 \

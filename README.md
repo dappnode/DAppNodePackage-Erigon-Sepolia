@@ -5,3 +5,5 @@
 ![avatar](avatar-default.png)
 
 [Docs](https://github.com/ledgerwatch/erigon)
+
+[License](LICENSE)
