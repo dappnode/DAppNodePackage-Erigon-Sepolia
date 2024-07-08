@@ -6,7 +6,6 @@ services:
       context: .
       args:
         UPSTREAM_VERSION: v2.60.3
-        UPSTREAM_VERSION: v2.60.3
     ports:
       - 35416:35416/tcp
       - 35416:35416/udp
@@ -14,14 +13,7 @@ services:
       - 47282:47282/udp
       - 9113:9113/udp
       - 9115:9115/tcp
-      - 35416:35416/tcp
-      - 35416:35416/udp
-      - 47282:47282/tcp
-      - 47282:47282/udp
-      - 9113:9113/udp
-      - 9115:9115/tcp
     volumes:
-      - data:/home/sepolia-erigon/.local/share
       - data:/home/sepolia-erigon/.local/share
     environment:
       P2P_PORT: 35416
