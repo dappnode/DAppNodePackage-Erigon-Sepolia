@@ -19,7 +19,7 @@ services:
       P2P_PORT: 35416
       CAPLIN_P2P_PORT: 9113
       CAPLIN_P2P_TCP_PORT: 9115
-      EXTRA_OPTS: "--http.api=eth,erigon,web3,net,debug,trace"
+      EXTRA_OPTS: "--http.api=eth,erigon,web3,net,debug"
     restart: unless-stopped
     ulimits:
       nofile:
